@@ -1,78 +1,85 @@
-# Jekyll-Bootstrap
+Jekyll Clean
+============
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+* Get it from [github](https://github.com/scotte/jekyll-clean).
+* See the [live demo](https://scotte.github.io/jekyll-clean).
+* See it [in action on my own blog](https://scotte.github.io).
 
-## Usage
+A simple and clean Jekyll theme using [bootstrap](http://getbootstrap.com)
+(not to be confused with jekyll-bootstrap) that's easy to modify and very
+modular in component and element reuse.
 
-For all usage and documentation please see: <http://jekyllbootstrap.com>
+It uses Disqus for comments and includes Google Analytics support. Both of
+these features are disabled by default and can be enabled via \_config.yml. You
+can also rip this code out of the templates if you like (footer.html and post.html).
+The beauty of Jekyll - keep things clean... Jekyll Clean!
 
-## Version
+The theme works well on mobile phones, using a collapsable nav bar and hiding the
+sidebar. The links pane in the sidebar is available on mobile through the nav menu,
+and you can do the same thing for any other sections added to the sidebar.
 
-0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
+Don't forget to occassionally merge against my upstream repository so you can get
+the latest changes. Pull requests are encouraged and accepted!
 
-**NOTE:** 0.3.0 introduces a new theme which is not backwards compatible in the sense it won't _look_ like the old version.
-However, the actual API has not changed at all.
-You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
+Installation
+============
 
-## Milestones
+If you don't have a blog already on github, start by cloning this repository.
+Best to do that directly on github and then clone that down to your computer.
 
-[0.4.0](https://github.com/plusjade/jekyll-bootstrap/milestones/v%200.4.0) - next release [ETA 03/29/2015]
+If you already do have a blog, You can certainly apply this theme to your existing
+blog in place, but then you won't be able to merge as the theme changes. If you
+re-apply your blog history on top of this theme's **gh-pages** branch, it's then
+easy to update to the latest version of the theme. You also don't want to have to
+deal with resolving old conflicts from your existing history, so you may wish to to
+push your existing master off to a new branch so you have the old history and start
+a new branch with this as the start, merging in your \_posts and other assets (after
+git rm'ing the current \_posts.
 
-### GOALS
+Not ideal, but you have to make a choice - either apply it manually or base your
+blog off this theme's branch. Either way it will work, and both have their own
+pros and cons.
 
-* No open PRs against master branch.
-* Squash some bugs.
-* Add some new features (low-hanging fruit).
-* Establish social media presence.
+You can setup an upstream tracking repository like so:
 
+```
+$ git remote add upstream git@github.com:scotte/jekyll-clean.git
+```
 
-### Bugs
+And now when you wish to merge your own branch onto the latest version of the
+theme, simply do:
 
-|Bug |Description
-|------|---------------
-|[#86](https://github.com/plusjade/jekyll-bootstrap/issues/86)  |&#x2611; Facebook Comments
-|[#113](https://github.com/plusjade/jekyll-bootstrap/issues/113)|&#x2611; ASSET_PATH w/ page & post
-|[#144](https://github.com/plusjade/jekyll-bootstrap/issues/144)|&#x2610; BASE_PATH w/ FQDN
-|[#227](https://github.com/plusjade/jekyll-bootstrap/issues/227)|&#x2611; Redundant JB/setup
+```
+$ git fetch upstream
+$ git merge upstream/gh-pages
+```
 
-### Features
+Of course you will have to resolve conflicts for \_config.yml, \_includes/links-list.html,
+and \_posts, and so on, but in practice this is pretty simple.
 
-|Bug |Description
-|------|---------------
-|[#98](https://github.com/plusjade/jekyll-bootstrap/issues/98)  |&#x2611; GIST Integration
-|[#244](https://github.com/plusjade/jekyll-bootstrap/issues/244)|&#x2611; JB/file_exists Helper
-|[#42](https://github.com/plusjade/jekyll-bootstrap/issues/42)  |&#x2611; Sort collections of Pages / Posts
-|[#84](https://github.com/plusjade/jekyll-bootstrap/issues/84)  |&#x2610; Detecting production mode
+This is how I maintain my own blog which is based on this theme. The old history is
+sitting in an **old-master** branch that I can refer to when I need to.
 
-### TODOS
+License
+=======
 
-Review existing pull requests against plusjake/jekyll-bootstrap:master. Merge or close each.
+The content of this theme is distributed and licensed under a
+![License Badge](/images/cc_by_88x31.png)
+[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
 
-* Create twitter account. Add link / icon on jekyllbootstrap.com.
-* Create blog posts under plusjade/gh-pages, expose on jekyllbootstrap.com, feed to twitter account.
-* Announce state of project, announce roadmap(s), announce new versions as they’re released.
+    This license lets others distribute, remix, tweak, and build upon your work,
+    even commercially, as long as they credit you for the original creation. This
+    is the most accommodating of licenses offered. Recommended for maximum
+    dissemination and use of licensed materials.
 
-## Contributing
+In other words: you can do anything you want with this theme on any site, just please
+provide a link to [the original theme on github](https://github.com/scotte/jekyll-clean)
+so I get credit for the original design. Beyond that, have at it!
 
+This theme includes the following files which are the properties of their
+respective owners:
 
-To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
-This is very important as it allows me to accept your pull request without having to publish a public version release.
-
-Small, atomic Features, bugs, etc.
-Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.
-Please rebase as often as possible when working.
-Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
-
-For Big Features or major API extensions/edits:
-This is the one case where I'll accept pull-requests based off the master branch.
-This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
-Translation : it might take a bit longer so please be patient! (but sincerely thank you).
-
-**Jekyll-Bootstrap Documentation Website.**
-
-The documentation website at <http://jekyllbootstrap.com> is maintained at https://github.com/plusjade/jekyllbootstrap.com
-
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)
+* js/bootstrap.min.js - [bootstrap](http://getbootstrap.com)
+* css/bootstrap.min.css - [bootstrap](http://getbootstrap.com)
+* js/jquery.min.js - [jquery](https://jquery.com)
+* images/cc_by_88x31.png - [creative commons](https://creativecommons.org)
