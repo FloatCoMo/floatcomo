@@ -1,14 +1,19 @@
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container container-left">
-    <div class="row">
-        <div class="col-md-3 hidden-xs">
-            {% include sidebar.html %}
-        </div>
-        <div class="col-md-9">
-            {{ content }}
-        </div>
+  {% include head.html %}
+
+  <body>
+
+    {% include nav.html %}
+
+    <div role="main" class="container main-content">
+      {{ content }}
     </div>
-</div>
 
-{% include footer.html %}
+    {% include footer.html %}
+
+    {% include footer-scripts.html %}
+
+  </body>
+</html>
