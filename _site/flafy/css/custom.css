@@ -24,7 +24,9 @@
 
 .maintitle{
 	color:#34495e;
-
+}
+#spaced{
+	margin-bottom: 500px;
 }
 
 #top-nav.navbar .nav > li > a {
