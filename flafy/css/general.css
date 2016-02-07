@@ -375,7 +375,6 @@ color: #ECEBEB;
 	font-weight: bold;
 }
 
-.content-style-form input[type="text"],
 .content-style-form input[type="password"] {
 	padding: 10px;
 	width: 100%;
@@ -386,7 +385,6 @@ color: #ECEBEB;
 	font-size: 2.2em;
 }
 
-.content-style-form input[type="text"]:focus,
 .content-style-form input[type="password"]:focus {
 	border-color: #e75854;
 	color: #e75854;
@@ -500,7 +498,7 @@ color: #ECEBEB;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
 }
-
+.content-style-form-4 input[type="email"],
 .content-style-form-4 input[type="text"] {
 	border: none;
 	background-color: #f0f0f0;
