@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (username.github.io) then use these settings:
-url: "http://floatcomo.com"
+url: "http://clarityfloats.com"
 baseurl: ""
 
 # External gems
@@ -19,7 +19,7 @@ gems:
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Float CoMo
+title: Clarity Float Spa
 
 # Short description of your site
 description: A virtual proof that name is awesome!
@@ -41,11 +41,11 @@ navbar-links:
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Float CoMo
-  email: "floatcomo@gmail.com"
-  facebook: Float-CoMo-890662054357743/
-  github: floatcomo
-  twitter: floatcomo
+  name: Clarity Float Spa
+  email: "clarityfloatspa@gmail.com"
+  facebook: clarityfloats
+  github: clarityfloats
+  twitter: clarityfloats
 
 # Select which links to show in the footer
 footer-links-active:
@@ -59,7 +59,7 @@ footer-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "FloatCoMo.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "ClarityFloats.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 
