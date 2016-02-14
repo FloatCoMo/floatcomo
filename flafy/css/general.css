@@ -172,6 +172,14 @@ width: 50px;
 	color: #1abc9c;
 }
 
+.headshot-img {
+   height: 250px;
+   width: 250px;
+   -moz-border-radius: 35px;
+   padding: 47px 10px;
+   margin-right: 15px;
+}
+
 .box-icon {
 	height: 150px;
 	width: 150px;
