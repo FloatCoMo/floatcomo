@@ -100,6 +100,19 @@ margin: auto;
   height: auto;
 }
 
+
+#owl-demo-2 .item{
+  margin: 3px;
+}
+#owl-demo-2 .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
 /*magnific */
 .mfp-bg {
 background: #000000 !important;
