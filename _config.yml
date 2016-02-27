@@ -19,7 +19,9 @@ gems:
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Clarity Floats
+
+title: Clarity Float Spa
+
 
 # Short description of your site
 description: A virtual proof that name is awesome!
@@ -41,9 +43,9 @@ navbar-links:
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Clarity Floats
-  email: "floatcomo@gmail.com"
-  facebook: Float-CoMo-890662054357743/
+  name: Clarity Float Spa
+  email: "clarityfloatspa@gmail.com"
+  facebook: clarityfloats
   github: clarityfloats
   twitter: clarityfloats
 
@@ -74,7 +76,7 @@ url-pretty: "ClarityFloats.com"  # eg. "deanattali.com/beautiful-jekyll"
 # Output options (more information on Jekyll's site)
 timezone: "America/Chicago"
 markdown: kramdown
-highlighter: pygments
+highlighter: rogue
 permalink: /:year-:month-:day-:title
 paginate: 5
 paginate_path: "/blog/page:num/"
