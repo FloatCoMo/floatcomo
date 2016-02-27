@@ -2,6 +2,6 @@ $(document).ready(function(){
 
     $(".navbar-nav li a").click(function(event) {
         if (!$(this).parent().hasClass('dropdown'))
-            $(".navbar-collapse").collapse('hide');
+            $(".navbar-ex1-collapse").collapse('hide');
     });
 });
