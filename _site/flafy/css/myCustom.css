@@ -2,6 +2,10 @@
 	margin:15px;
 }
 
+.navbar-collapse {
+  max-height: none;
+}
+
 .vid{
 	height:500px;
 	width: 400px;
