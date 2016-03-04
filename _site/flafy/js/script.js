@@ -9,7 +9,7 @@ http://www.andreagalanti.it
 $(window).load(function() {
 	//Preloader
 	$('#status').delay(300).fadeOut();
-	$('#preloader').delay(300).fadeOut('slow');
+	$('#preloader').delay(150).fadeOut('slow');
 	$('body').delay(550).css({'overflow':'visible'});
 })
 
@@ -58,19 +58,36 @@ $(document).ready(function() {
 			  singleItem:true
 		});
 
-		//SmothScroll
-		$('a[href*=#]').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-			&& location.hostname == this.hostname) {
-					var $target = $(this.hash);
-					$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-					if ($target.length) {
-							var targetOffset = $target.offset().top;
-							$('html,body').animate({scrollTop: targetOffset}, 600);
-							return false;
-					}
-			}
+
+
+		$('a[href*=#]').click(function(event) {
+			event.preventDefault();
+			var link = this;
+			$.smoothScroll({
+				scrollTarget: link.hash
+			});
 		});
+
+
+		//SmothScroll old
+		// $('a[href*=#]').click(function() {
+		// 	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		// 			var $target = $(this.hash);
+		// 			console.log("target hash",$target);
+		// 			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+		// 			console.log("target length",$target);
+		// 			console.log("target length #",$target.length);
+		//
+		// 			if ($target.length) {
+		// 					// var targetOffset = $target.offset().top - $('.navbar-default').height();
+		// 					var targetOffset = $target.offset().top;
+		//
+		// 					console.log("scroll");
+		// 					$('html,body').animate({scrollTop: targetOffset}, 600);
+		// 					return false;
+		// 			}
+		// 	}
+		// });
 
 		//Subscribe
 		new UIMorphingButton( document.querySelector( '.morph-button' ) );
