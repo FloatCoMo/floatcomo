@@ -1,6 +1,12 @@
 /* Owl Carousel Bootstrap Custom CSS */
 
 /* Header Navigation */
+
+.affixed + .container {
+    padding-top:50px
+}
+
+
 #top-nav{
 	border-bottom: 1px solid #e1e6dd;
 	background: #FFF;

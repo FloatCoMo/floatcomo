@@ -4,4 +4,6 @@ $(document).ready(function(){
         if (!$(this).parent().hasClass('dropdown'))
             $(".navbar-ex1-collapse").collapse('hide');
     });
+
+
 });
