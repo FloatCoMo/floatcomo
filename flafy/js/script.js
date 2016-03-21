@@ -60,13 +60,25 @@ $(document).ready(function() {
 
 
 
+		// $('a[href*=#]').click(function(event) {
+		// 	event.preventDefault();
+		// 	var link = this;
+		// 	$.smoothScroll({
+		// 		scrollTarget: link.hash
+		// 	});
+		// });
+
+
 		$('a[href*=#]').click(function(event) {
-			event.preventDefault();
-			var link = this;
-			$.smoothScroll({
-				scrollTarget: link.hash
-			});
-		});
+	      event.preventDefault();
+	      var link = this;
+	      var offset = $('#newsletter').offset().top;
+		  offset = offset-5;
+	      $.smoothScroll({
+	        scrollTarget: link.hash,
+	        offset: -offset
+	      });
+	    });
 
 		//Subscribe
 		new UIMorphingButton( document.querySelector( '.morph-button' ) );
