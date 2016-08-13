@@ -3,7 +3,13 @@
 /* Header Navigation */
 
 .affixed + .container {
-    padding-top:50px
+    padding-top:50px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width:1185px
+    }
 }
 
 
@@ -433,4 +439,12 @@ NO MORE TABLES!! ;)
 		content: "Description:";
 		font-weight: bold;
 	}
+}
+
+
+.btn-book{
+    font-size:27px !important;
+}
+.small-btn {
+    width:300px !important;
 }

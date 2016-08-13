@@ -120,7 +120,7 @@ opacity: 0.95 !important;
 filter: alpha(opacity=95) !important;
 }
 
-.item .img-responsive {cursor:url(../img/cross.png),auto;}
+/*.item .img-responsive {cursor:url(../img/cross.png),auto;}*/
 
 /* Preloader */
 #preloader {
@@ -904,6 +904,14 @@ color: #ECEBEB;
 	-webkit-transition: height 0.5s cubic-bezier(0.7,0,0.3,1);
 	transition: height 0.5s cubic-bezier(0.7,0,0.3,1);
 }
+
+.morph-button-inflow-5 {
+	width: 300px;
+	margin: 2em auto;
+	-webkit-transition: height 0.5s cubic-bezier(0.7,0,0.3,1);
+	transition: height 0.5s cubic-bezier(0.7,0,0.3,1);
+}
+
 
 .morph-button-inflow-1 > button span {
 	visibility: hidden;
