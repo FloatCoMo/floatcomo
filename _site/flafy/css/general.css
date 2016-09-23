@@ -120,7 +120,7 @@ opacity: 0.95 !important;
 filter: alpha(opacity=95) !important;
 }
 
-.item .img-responsive {cursor:url(../img/cross.png),auto;}
+.item .img-responsive {auto;}
 
 /* Preloader */
 #preloader {
