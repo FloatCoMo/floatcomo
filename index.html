@@ -97,7 +97,7 @@
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
-   
+  
 </head>
 
 <body id="home">
@@ -142,7 +142,7 @@
                    <!-- <li class="menuItem"><a href="/blog">Blog</a></li> -->
                    <li class="menuItem"><a data-scroll href="#theteam">The Team</a></li>
                    <li class="menuItem"><a data-scroll href="#contact">Contact</a></li>
-                   <li class="menuItem"><a class="btn btn-primary btn-sm" href="https://clarityfloats.floathelm.com/store" target="_blank">Book a Float</a></li>
+                   <li class="menuItem"><a class="btn btn-primary btn-sm" id="bookBtn" href="https://clarityfloats.floathelm.com/store" target="_blank">Book a Float</a></li>
                </ul>
            </div>
 
@@ -765,6 +765,14 @@
    <script src="flafy/js/uiMorphingButton_inflow.js"></script>
    <!-- Magnific Popup core JS file -->
    <script src="flafy/js/jquery.magnific-popup.js"></script>
+
+   <script type="text/javascript">
+      $( '#$addToCartButton' ).click(function() {
+         fbq('track', 'AddToCart');
+      });
+   </script>
+
+
 </body>
 
 </html>
