@@ -142,7 +142,7 @@
                    <!-- <li class="menuItem"><a href="/blog">Blog</a></li> -->
                    <li class="menuItem"><a data-scroll href="#theteam">The Team</a></li>
                    <li class="menuItem"><a data-scroll href="#contact">Contact</a></li>
-                   <li class="menuItem"><a class="btn btn-primary btn-sm" id="bookBtn" href="https://clarityfloats.floathelm.com/booking" target="_blank">Book a Float</a></li>
+                   <li class="menuItem"><a class="btn btn-primary btn-sm" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/booking" target="_blank">Book a Float</a></li>
                </ul>
            </div>
 
@@ -159,7 +159,7 @@
 
            <div class="row">
                <div class="col-sm-12 wow fadeInDown text-center">
-                   <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" href="https://clarityfloats.floathelm.com/booking" target="_blank">Click to book</a>   
+                   <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/booking" target="_blank">Click to book</a>   
               </div>
               </div><!-- /.row -->
            </div>
@@ -740,10 +740,7 @@
      jQuery(function($) {
        $(document).ready( function() {
          $('.navbar-default').stickUp();
-         $( '#bookBtn' ).click(function() {
-            fbq('track', 'Purchase');
-         });
-          
+
          fbq('track', 'ViewContent');
 
        });
@@ -759,6 +756,11 @@
 
      ga('create', 'UA-74351054-1', 'auto');
      ga('send', 'pageview');
+      
+     function bookClick() {
+         fbq('track', 'AddToCart');
+     }
+
    </script>
 
 
