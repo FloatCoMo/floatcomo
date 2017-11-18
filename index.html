@@ -740,6 +740,9 @@
      jQuery(function($) {
        $(document).ready( function() {
          $('.navbar-default').stickUp();
+         $( '#bookBtn' ).click(function() {
+            fbq('track', 'AddToCart');
+         });
        });
      });
    </script>
@@ -765,12 +768,6 @@
    <script src="flafy/js/uiMorphingButton_inflow.js"></script>
    <!-- Magnific Popup core JS file -->
    <script src="flafy/js/jquery.magnific-popup.js"></script>
-
-   <script type="text/javascript">
-      $( '#bookBtn' ).click(function() {
-         fbq('track', 'AddToCart');
-      });
-   </script>
 
 
 </body>
