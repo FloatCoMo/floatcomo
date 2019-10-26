@@ -2,6 +2,20 @@
 	margin: 15px;
 }
 
+.citation a:link {
+	color: #0060b6;
+	text-decoration: none;
+}
+
+.citation a:hover {
+	color: #00a0c6;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.list-custom {
+	list-style-type: initial !important;
+}
 .youtube-player {
 	position: relative;
 	padding-bottom: 56.23%;

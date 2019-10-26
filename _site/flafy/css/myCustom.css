@@ -2,6 +2,14 @@
 	margin: 15px;
 }
 
+.citation {
+	color: #1bbc9c;
+	text-decoration: none;
+}
+
+.list-custom {
+	list-style-type: initial !important;
+}
 .youtube-player {
 	position: relative;
 	padding-bottom: 56.23%;

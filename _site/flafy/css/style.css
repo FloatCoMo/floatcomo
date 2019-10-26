@@ -318,7 +318,7 @@ p {
   line-height: 1.72222;
   margin: 0 0 15px;
 }
-li{list-style-type:none}
+li{list-style-type:initial}
 .white {color:white}
 .hidden { visibility: hidden;}
 .lead {
