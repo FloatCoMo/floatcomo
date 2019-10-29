@@ -2,13 +2,13 @@
 	margin: 15px;
 }
 
-.citation a:link {
-	color: #0060b6;
+.citation {
+	color: #0060b6 !important;
 	text-decoration: none;
 }
 
 .citation a:hover {
-	color: #00a0c6;
+	color: #00a0c6 !important;
 	text-decoration: none;
 	cursor: pointer;
 }
