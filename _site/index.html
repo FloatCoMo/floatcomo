@@ -60,27 +60,26 @@
     <link href="flafy/css/style.css" rel="stylesheet">
     <link href="flafy/css/animate.css" rel="stylesheet">
 
-    <script>
+     <script>
         window['_fs_debug'] = false;
-        window['_fs_host'] = 'www.fullstory.com';
+        window['_fs_host'] = 'fullstory.com';
+        window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
         window['_fs_org'] = '3A6RV';
         window['_fs_namespace'] = 'FS';
-        (function (m, n, e, t, l, o, g, y) {
-            if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return; }
-            g = m[e] = function (a, b) { g.q ? g.q.push([a, b]) : g._api(a, b); }; g.q = [];
-            o = n.createElement(t); o.async = 1; o.src = 'https://' + _fs_host + '/s/fs.js';
-            y = n.getElementsByTagName(t)[0]; y.parentNode.insertBefore(o, y);
-            g.identify = function (i, v) { g(l, { uid: i }); if (v) g(l, v) }; g.setUserVars = function (v) { g(l, v) };
-            g.identifyAccount = function (i, v) { o = 'account'; v = v || {}; v.acctId = i; g(o, v) };
-            g.clearUserCookie = function (c, d, i) {
-                if (!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')) {
-                    d = n.domain; while (1) {
-                        n.cookie = 'fs_uid=;domain=' + d +
-                            ';path=/;expires=' + new Date(0).toUTCString(); i = d.indexOf('.'); if (i < 0) break; d = d.slice(i + 1)
-                    }
-                }
-            };
-        })(window, document, window['_fs_namespace'], 'script', 'user');
+        (function(m,n,e,t,l,o,g,y){
+            if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+            g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+            o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_script;
+            y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+            g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+            g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+            g.log = function(a,b){g("log",[a,b])};
+            g.consent=function(a){g("consent",!arguments.length||a)};
+            g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+            g.clearUserCookie=function(){};
+            g._w={};y='XMLHttpRequest';g._w[y]=m[y];y='fetch';g._w[y]=m[y];
+            if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
+        })(window,document,window['_fs_namespace'],'script','user');
     </script>
 
     <!-- Magnific Popup core CSS file -->
@@ -513,6 +512,32 @@
                             to collect yourself.
                         </div>
                     </div>
+                    <div class="faq">
+                        <h4>What are you doing to protect me from COVID-19?</h4>
+                        <div class="faq-answer">
+                            The following procedures have been implemented for your safety:
+                            <ul>
+                                <li>We ask that our customers please wear a mask in the common areas at Clarity (bathrooms, lobby, lounges)</li>
+                                <li>Motion sensors for lights in the bathrooms to minimize contact points</li>
+                                <li>Foot door opener on front door</li>
+                                <li>Additional time between services to allow us to thoroughly clean and ventilate every room between customers</li>
+                            </ul>
+
+                            We ask that customers stay home if they experience any of the following symptoms or have been exposed to someone with COVID-19:
+                            <ul>
+                                <li>Fever</li>
+                                <li>Dry Cough</li>
+                                <li>Fatigue</li>
+                                <li>Difficulty Breathing</li>
+                                <li>New loss of taste or smell</li>
+                            </ul>
+
+                 
+
+
+                        </div>
+                    </div>
+                    
 
 
                 </div>
@@ -759,7 +784,7 @@
                         <div class="col-md-12">
                             <h3>Zac Crismaru</h3>
                             <h3>
-                                <A style="color: white;" HREF="mailto:&#122;&#097;&#099;&#097;&#114;&#121;&#099;&#114;&#105;&#115;&#109;&#097;&#114;&#117;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+                                <A style="color: white;" HREF="mailto:&#122;&#097;&#099;&#064;&#099;&#108;&#097;&#114;&#105;&#116;&#121;&#102;&#108;&#111;&#097;&#116;&#115;&#046;&#099;&#111;&#109;"
                                     target="_blank">Email Zac</a>
                             </h3>
                             <p>
@@ -821,13 +846,13 @@
                     <h3>Infrared Heat Therapy Benefits Include:<br></h3>
                     <h4>
                         <ul class="">
-                            <li>mental wellbeing<a class="citation" href="https://www.ncbi.nlm.nih.gov/pubmed/12753076" target="_blank">[1]</a></li>
-                            <li>detoxification<a class="citation" href="https://dx.doi.org/10.1007/s00244-010-9611-5" target="_blank">[2]</a></li>
-                            <li>cardiovascular health<a class="citation" href="https://dx.doi.org/10.1007/BF02330710" target="_blank">[3]</a></li>
-                            <li>mental focus and attention span<a class="citation" href="https://dx.doi.org/10.1016/j.brainres.2004.03.078" target="_blank">[4]</a></li>
-                            <li>increasing cognition/memory<a class="citation" href="https://dx.doi.org/10.3233/BPL-160040" target="_blank">[5]<a class="citation" href="https://dx.doi.org/10.1038/nrn1387" target="_blank">[6]</a></li>
-                            <li>improved circulation<a class="citation" href="https://www.ncbi.nlm.nih.gov/pubmed/3218896" target="_blank">[7]</a></li>
-                            <li>increased longevity<a class="citation" href="https://dx.doi.org/10.1126/science.1094637" target="_blank">[8]</a></li>
+                            <li>mental wellbeing<a class="citation" href="https://www.foundmyfitness.com/topics/sauna#cognitive-amp-mental-health" target="_blank">[1]</a></li>
+                            <li>detoxification<a class="citation" href="https://www.foundmyfitness.com/topics/sauna#detoxification" target="_blank">[2]</a></li>
+                            <li>cardiovascular health<a class="citation" href="https://www.foundmyfitness.com/topics/sauna#cardiovascular-health" target="_blank">[3]</a></li>
+                            <li>mental focus and attention span<a class="citation" href="https://www.foundmyfitness.com/topics/sauna#mental-focus-and-attention-span" target="_blank">[4]</a></li>
+                            <li>increasing cognition/memory<a class="citation" href="https://www.foundmyfitness.com/topics/sauna#cognitive-amp-mental-health" target="_blank">[5]</a></li>
+                            <li>improved circulation<a class="citation" href="https://www.foundmyfitness.com/topics/sauna#cardiovascular-health" target="_blank">[6]</a></li>
+                            <li>increased longevity<a class="citation" href="https://www.foundmyfitness.com/topics/sauna#foxo3" target="_blank">[7]</a></li>
                             <li>see full explanations of above benefits<a class="citation" href="https://www.foundmyfitness.com/topics/sauna" target="_blank">[here]</a></li>
 
                             
@@ -859,13 +884,14 @@
                         performance, and prevent injuries.  It can also help improve mood and reset circadian rhythms, which can lead to better sleep and more energy.  Floating before a massage helps maximize these benefits, just as getting a massage immediately before floating maximizes the benefits of the float!  For these reasons, we are now offering this powerful wellness combo here at Clarity Float Spa.</p>
                         <a class="btn-book text-center btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/booking"
                         target="_blank">Book a massage</a>
+                        <br><br>
                 </div>
 
                 <div class="col-md-6 pull-right wow fadeInRightBig">
                     <img class="img-responsive " src="/img/shop/massageRoom.jpg" alt="">
                 </div>
 
-                <div class="col-sm-6  col-md-offset-3 block wow bounceIn white">
+                <!-- <div class="col-sm-6  col-md-offset-3 block wow bounceIn white">
                     <div class="row">
                         <div class="col-md-4 headshot-img">
                             <img class="img-responsive img-rounded" src="/img/headshots/new/robyn2.png" alt="">
@@ -887,9 +913,9 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="col-sm-6  col-md-offset-3 block wow bounceIn white">
+                <!--<div class="col-sm-6  col-md-offset-3 block wow bounceIn white">
                     <div class="row">
                         <div class="col-md-4 headshot-img">
                             <img class="img-responsive img-rounded" src="/img/headshots/new/albino2.png" alt="">
@@ -911,7 +937,7 @@
                         </div>
                     </div>
                 </div>
-
+               -->
                 
 
                 
@@ -970,12 +996,19 @@
                         <div class="col-sm-6 pull-left wow fadeInLeftBig">
                             <h3>Pricing:</h3>
                             <h4>90 minute float: $70</h4>
-                            <h4>Float Membership: $49 per month</h4>
-                            <h5>One monthly credit.</h5>
+                            <h4>60 minute float: $55</h4>
+
+                            <h4>90 Min Float Membership: $49 per month</h4>
                             <h5>Additional floats (just for you) are only $39.</h5>
-                            <h5>Shared floats and gift cards are $49.</h5>
+
+                            <h4>60 Min Float Membership: $39 per month</h4>
+                            <h5>Additional floats (just for you) are only $29.</h5>
+
+                            <h5>One monthly credit for both memberships.</h5>
+                            <h5>Shared floats and gift cards are same as monthly price.</h5>
                             <h5>Floats don't expire with an active membership.</h5>
-                            <h5>3 month commitment.</h5>
+                            <h5>3 month commitment for 90 minute membership.</h5>
+                            <h5>4 month commitment for 60 minute membership.</h5>
                             <h5>Preferred pricing: 10% off retail, massage and any deal or special.</h5>
                             <h5>Free gift card for a friend after every 10th visit.</h5>
                             <br>
@@ -985,10 +1018,9 @@
                             <br>
                             <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/booking"
                         target="_blank">Click to book</a>
-                            <h3>Hours:</h3>
-                            <h4>Monday: 6pm-10pm</h4>
+                            <h3>Hours (limited due to COVID-19):</h3>
                             <h4>Closed Tuesdays for a deep clean</h4>
-                            <h4>Wednesday-Sunday: 10am-10pm</h4>
+                            <h4>Monday evenings 4-10pm Friday-Sunday: 11am-10pm</h4>
                             <h4>Note: these hours are dependent on bookings.  On the occasion that we have no scheduled appointments, our hours of operation may be shortened accordingly.</h4>
                             <br>
                             
@@ -1160,7 +1192,7 @@
     <script src="flafy/js/jquery-1.10.2.js"></script>
     <script src="flafy/js/bootstrap.js"></script>
     <script src="flafy/js/jquery.smooth-scroll.js"></script>
-    <script src="flafy/js/owl.carousel.js"></script>
+    <!-- <script src="flafy/js/owl.carousel.js"></script> -->
     <!-- <script src="flafy/js/smooth-scroll.js"></script> -->
     <script src="flafy/js/custom.js"></script>
     <!-- StikyMenu -->
