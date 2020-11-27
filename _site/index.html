@@ -37,8 +37,13 @@
 
     <title>Clarity Float Spa</title>
 
+  
     <!-- Bootstrap core CSS -->
     <link href="flafy/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- jQuery Modal CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
 
     <!-- Custom Google Web Font -->
     <link href="flafy/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -200,6 +205,9 @@
                 <div class="col-sm-12 wow fadeInDown text-center">
                     <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/booking"
                         target="_blank">Click to book</a>
+                    <br><br>
+                    <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards"
+                    target="_blank">Click to get holiday BOGO deals</a>
                 </div>
             </div>
 
@@ -1212,9 +1220,46 @@
     </div>
 
 
+<div id="holiday-deal" class="modal">
+    <div class="col-sm-12 wow fadeInDown text-center">
+<h3>Holiday Special! Buy One Get One FREE Floats</h3>
+
+
+
+    <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards/1214549"
+                    target="_blank">Get holiday BOGO 60 min floats</a>
+  <br><br>
+
+   <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards/1214954"
+                    target="_blank">Get holiday BOGO 90 min floats</a>
+  <br><br>
+
+   <a class="btn btn-danger btn-primary view" rel="modal:close"   href="#"
+                    target="_blank">No thanks</a>
+
+
+    </div>
+    
+
+                    
+</div>
+
+<!-- Link to open the modal -->
+<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+
+
     <!-- JavaScript -->
+  
+
     <script src="flafy/js/jquery-1.10.2.js"></script>
+
+   
     <script src="flafy/js/bootstrap.js"></script>
+    
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+
     <script src="flafy/js/jquery.smooth-scroll.js"></script>
     <!-- <script src="flafy/js/owl.carousel.js"></script> -->
     <!-- <script src="flafy/js/smooth-scroll.js"></script> -->

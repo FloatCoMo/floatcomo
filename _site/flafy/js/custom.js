@@ -3,6 +3,14 @@ $(document).ready(function() {
 		if (!$(this).parent().hasClass('dropdown')) $('.navbar-ex1-collapse').collapse('hide');
 	});
 
+	console.log( "ready!" );
+	$('#holiday-deal').modal({
+		escapeClose: false,
+		clickClose: false,
+		showClose: false
+	});
+	
+
 	$(function() {
 		if ($('[data-lazy-load-image]').length > 0) {
 			$('[data-lazy-load-image]').each(function(index, element) {
