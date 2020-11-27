@@ -36,27 +36,27 @@ $(document).ready(function() {
 
 
 		// OwlCarousel N1
-		$("#owl-demo").owlCarousel({
-			autoPlay: 3000,
-			items : 3,
-			itemsDesktop : [1199,3],
-			itemsDesktopSmall : [979,3]
-		});
+		// $("#owl-demo").owlCarousel({
+		// 	autoPlay: 3000,
+		// 	items : 3,
+		// 	itemsDesktop : [1199,3],
+		// 	itemsDesktopSmall : [979,3]
+		// });
 
-		// OwlCarousel N2
-		$("#owl-demo-1").owlCarousel({
-			  navigation : false, // Show next and prev buttons
-			  slideSpeed : 300,
-			  paginationSpeed : 400,
-			  singleItem:true
-		});
+		// // OwlCarousel N2
+		// $("#owl-demo-1").owlCarousel({
+		// 	  navigation : false, // Show next and prev buttons
+		// 	  slideSpeed : 300,
+		// 	  paginationSpeed : 400,
+		// 	  singleItem:true
+		// });
 
-		$("#owl-demo-2").owlCarousel({
-			  navigation : false, // Show next and prev buttons
-			  slideSpeed : 300,
-			  paginationSpeed : 400,
-			  singleItem:true
-		});
+		// $("#owl-demo-2").owlCarousel({
+		// 	  navigation : false, // Show next and prev buttons
+		// 	  slideSpeed : 300,
+		// 	  paginationSpeed : 400,
+		// 	  singleItem:true
+		// });
 
 
 

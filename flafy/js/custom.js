@@ -3,7 +3,6 @@ $(document).ready(function() {
 		if (!$(this).parent().hasClass('dropdown')) $('.navbar-ex1-collapse').collapse('hide');
 	});
 
-	console.log( "ready!" );
 	$('#holiday-deal').modal({
 		escapeClose: false,
 		clickClose: false,
