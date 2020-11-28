@@ -3,11 +3,21 @@ $(document).ready(function() {
 		if (!$(this).parent().hasClass('dropdown')) $('.navbar-ex1-collapse').collapse('hide');
 	});
 
-	$('#holiday-deal').modal({
-		escapeClose: false,
-		clickClose: false,
-		showClose: false
-	});
+	// $('#holiday-deal').modal({
+	// 	escapeClose: false,
+	// 	clickClose: false,
+	// 	showClose: false
+	// });
+	
+
+
+	$('#holiday-deal').modal();
+	// $(function() {
+	// 	$('#holiday-deal').on('click', function() {
+	// 	  $($(this).data('modal')).modal();
+	// 	  return false;
+	// 	});
+	//   });
 	
 
 	$(function() {
@@ -21,3 +31,7 @@ $(document).ready(function() {
 		}
 	});
 });
+
+function closeModal(){
+	$.modal.close();
+}
