@@ -32,6 +32,10 @@
 	margin: 5px;
 }
 
+.btn {
+	white-space: normal;
+}
+
 .youtube-player iframe {
 	position: absolute;
 	top: 0;
