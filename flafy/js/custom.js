@@ -9,13 +9,13 @@ $(document).ready(function() {
 		showClose: false
 	});
 	
-	// $('#holiday-deal').modal();
-	// $(function() {
-	// 	$('#holiday-deal').on('click', function() {
-	// 	  $($(this).data('modal')).modal();
-	// 	  return false;
-	// 	});
-	//   });
+	$('#holiday-deal').modal();
+	$(function() {
+		$('#holiday-deal').on('click', function() {
+		  $($(this).data('modal')).modal();
+		  return false;
+		});
+	  });
 
 	$(function() {
 		if ($('[data-lazy-load-image]').length > 0) {
