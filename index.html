@@ -44,6 +44,7 @@
       <!-- jQuery Modal CSS-->
     <link rel="stylesheet" href="flafy/css/jquery.modal.css" />
 
+    <link rel="stylesheet" href="flafy/css/jquery.countdown.css" />
 
     <!-- Custom Google Web Font -->
     <link href="flafy/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -1044,6 +1045,20 @@
                                     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
                                      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
                                 </style>
+
+                                <!-- JQuery countdown -->
+                                <style>
+                                    #countdown{
+                                        padding-top:10px;
+                                        width:auto;
+                                    }
+                                    .countdown-text{
+                                        margin-top:10px
+                                    }
+
+                                </style>
+
+
                                 <div id="mc_embed_signup">
                                     <form action="//floatcomo.us12.list-manage.com/subscribe/post?u=31303f796e318b0b9e2d31314&amp;id=c36a0bfe87" method="post"
                                         id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
@@ -1214,8 +1229,13 @@
 
 <div id="holiday-deal" class="modal">
     <div class="col-sm-12 wow fadeInDown text-center">
-    <h3>Holiday Special! Buy one float or sauna session, get one free</h3>
+    <h4 class="countdown-text">Holiday Special!</h4>
+    <h3 class="countdown-text">Buy one float 💧 or sauna 🔥 session, get one free!</h3>
 
+    <h3 class="countdown-text">Offer till the end of the year!🎉</h3>
+
+    <div id="countdown"></div>
+    <h5><div id="note"></div> </h5>
 
 
     <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards"
@@ -1240,7 +1260,7 @@
   
 
     <script src="flafy/js/jquery-1.10.2.js"></script>
-
+    <Script src="flafy/js/jquery.countdown.js"></script>
    
     <script src="flafy/js/bootstrap.js"></script>
     
@@ -1261,7 +1281,41 @@
                 $('.navbar-default').stickUp();
 
                 fbq('track', 'ViewContent');
+                $(function(){
+                    var note = $('#note'),
+                        ts = new Date(2021, 0, 1),
+                        newYear = true;
 
+                    if((new Date()) > ts){
+                        // The new year is here! Count towards something else.
+                        // Notice the *1000 at the end - time must be in milliseconds
+                        ts = (new Date()).getTime() + 10*24*60*60*1000;
+                        newYear = false;
+                    }
+
+                    $('#countdown').countdown({
+                        timestamp   : ts,
+                        callback    : function(days, hours, minutes, seconds){
+
+                            var message = "";
+
+                            message += days + " day" + ( days==1 ? '':'s' ) + ", ";
+                            message += hours + " hour" + ( hours==1 ? '':'s' ) + ", ";
+                            message += minutes + " minute" + ( minutes==1 ? '':'s' ) + " and ";
+                            message += seconds + " second" + ( seconds==1 ? '':'s' ) + " ";
+
+                            if(newYear){
+                                message += "left!  Stock up today!";
+                            }
+                            else {
+                                message += "left to 10 days from now!";
+                            }
+
+                            note.html(message);
+                        }
+                    });
+
+                });
             });
         });
 
@@ -1314,6 +1368,7 @@
         }
 
     </script>
+    
 
 
     <script type="text/javascript" src="flafy/js/jquery.corner.js"></script>

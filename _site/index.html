@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="Float center in Columbia mo ">
     <meta name="author" content="Clarity Float Spa">
-    <meta name="keywords" content="floating, float tanks, sensory deprivation, floating columbia mo, float tank center columbia">
+    <meta name="keywords" content="floating, float tanks, sensory deprivation, floating columbia mo, float tank center columbia, sauna, infrared sauna, heat therapy, heat shock proteins, detox, sauna detox, columbia mo sauna, columbia mo infrared sauna">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -44,6 +44,7 @@
       <!-- jQuery Modal CSS-->
     <link rel="stylesheet" href="flafy/css/jquery.modal.css" />
 
+    <link rel="stylesheet" href="flafy/css/jquery.countdown.css" />
 
     <!-- Custom Google Web Font -->
     <link href="flafy/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -415,7 +416,6 @@
                             <h3>After your float:</h3>
                             <h4>
                                 <br> Feel free to hang out, read, chat, sip tea, and bask in your post-float glow.
-                                glow.
                                 <br> Stay as long or as little as you'd like. 
                                 <br>
                             </h4>
@@ -469,13 +469,6 @@
                                 We recommend arriving 20 minutes before your first appointment so that you can spend some time filling out some paperwork we have.  Also we have books and other things to look at while you wait.
                             </div>
                         </div>
-                    <div class="faq">
-                        <h4>Why 90 minutes?</h4>
-                        <div class="faq-answer">
-                            We have found that 90 minutes is the best amount of time to get deep into the experience. Anything less you may not get the
-                            full effects. You are free to end your float at any time within those 90 minutes.
-                        </div>
-                    </div>
                     <div class="faq">
                         <h4>How clean is the water?</h4>
                         <div class="faq-answer">
@@ -1052,6 +1045,20 @@
                                     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
                                      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
                                 </style>
+
+                                <!-- JQuery countdown -->
+                                <style>
+                                    #countdown{
+                                        padding-top:10px;
+                                        width:auto;
+                                    }
+                                    .countdown-text{
+                                        margin-top:10px
+                                    }
+
+                                </style>
+
+
                                 <div id="mc_embed_signup">
                                     <form action="//floatcomo.us12.list-manage.com/subscribe/post?u=31303f796e318b0b9e2d31314&amp;id=c36a0bfe87" method="post"
                                         id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
@@ -1222,8 +1229,13 @@
 
 <div id="holiday-deal" class="modal">
     <div class="col-sm-12 wow fadeInDown text-center">
-    <h3>Holiday Special! Buy one float or sauna session, get one free</h3>
+    <h4 class="countdown-text">Holiday Special!</h4>
+    <h3 class="countdown-text">Buy one float 💧 or sauna 🔥 session, get one free!</h3>
 
+    <h3 class="countdown-text">Offer till the end of the year!🎉</h3>
+
+    <div id="countdown"></div>
+    <h5><div id="note"></div> </h5>
 
 
     <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards"
@@ -1248,7 +1260,7 @@
   
 
     <script src="flafy/js/jquery-1.10.2.js"></script>
-
+    <Script src="flafy/js/jquery.countdown.js"></script>
    
     <script src="flafy/js/bootstrap.js"></script>
     
@@ -1269,7 +1281,41 @@
                 $('.navbar-default').stickUp();
 
                 fbq('track', 'ViewContent');
+                $(function(){
+                    var note = $('#note'),
+                        ts = new Date(2021, 0, 1),
+                        newYear = true;
 
+                    if((new Date()) > ts){
+                        // The new year is here! Count towards something else.
+                        // Notice the *1000 at the end - time must be in milliseconds
+                        ts = (new Date()).getTime() + 10*24*60*60*1000;
+                        newYear = false;
+                    }
+
+                    $('#countdown').countdown({
+                        timestamp   : ts,
+                        callback    : function(days, hours, minutes, seconds){
+
+                            var message = "";
+
+                            message += days + " day" + ( days==1 ? '':'s' ) + ", ";
+                            message += hours + " hour" + ( hours==1 ? '':'s' ) + ", ";
+                            message += minutes + " minute" + ( minutes==1 ? '':'s' ) + " and ";
+                            message += seconds + " second" + ( seconds==1 ? '':'s' ) + " ";
+
+                            if(newYear){
+                                message += "left!  Stock up today!";
+                            }
+                            else {
+                                message += "left to 10 days from now!";
+                            }
+
+                            note.html(message);
+                        }
+                    });
+
+                });
             });
         });
 
@@ -1322,6 +1368,7 @@
         }
 
     </script>
+    
 
 
     <script type="text/javascript" src="flafy/js/jquery.corner.js"></script>
