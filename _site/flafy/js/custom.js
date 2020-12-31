@@ -3,11 +3,19 @@ $(document).ready(function() {
 		if (!$(this).parent().hasClass('dropdown')) $('.navbar-ex1-collapse').collapse('hide');
 	});
 
-	$('#holiday-deal').modal({
-		escapeClose: false,
-		clickClose: false,
-		showClose: false
-	});
+
+	var newYear = new Date("Janurary 1, 2021");
+	var now = new Date();
+	if (now < newYear){
+			$('#holiday-deal').modal({
+				escapeClose: false,
+				clickClose: false,
+				showClose: false
+			});
+	} else {
+		$(".BOGO").hide();
+	}
+
 	
 
 	$(function() {
