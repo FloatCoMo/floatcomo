@@ -11,7 +11,7 @@ $(document).ready(function () {
 		});
 	});
 
-	var newYear = new Date("November 29, 2022");
+	var newYear = new Date("November 30, 2022");
 	var now = new Date();
 	if (now < newYear) {
 		$('#holiday-deal').modal({
