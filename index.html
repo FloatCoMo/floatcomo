@@ -203,9 +203,9 @@
                 <div class="col-sm-12 wow fadeInDown text-center">
                     <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/booking"
                         target="_blank">Click to book</a>
-                    <!-- <br><br> -->
-                   <!-- <a class="btn-book btn btn-embossed btn-primary view BOGO" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards/1221357"
-                    target="_blank">Get the Black Friday Deal!</a>-->
+                    <br><br>
+                   <a class="btn-book btn btn-embossed btn-primary view BOGO" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards/1214549"
+                    target="_blank">Get the Holiday Deal!</a>
                 </div>
             </div>
 
@@ -1168,23 +1168,19 @@
         </div>
     </div>
 
-<!--
 <div id="holiday-deal" class="modal">
     <div class="col-sm-12 wow fadeInDown text-center">
     <h4 class="countdown-text">Holiday Special!</h4>
-    <h3 class="countdown-text">Buy one float 💧 one sauna 🔥 session and one 💆 massage , get one of each free!</h3>
-
-    <h3 class="countdown-text">Offer valid until November 29th!🎉</h3>
+    <h3 class="countdown-text">Buy one float 💧 get one free!</h3>
+    <h3 class="countdown-text">Offer valid until December 31st!🎉</h3>
 
     <div id="countdown"></div>
     <h5><div id="note"></div> </h5>
 
 
-    <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards/1221357"
-                    target="_blank">Click to purchase</a>
+    <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards/1214549"target="_blank">Click to purchase</a>
+    
 
-    <!-- <a class="btn-book btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/giftcards/1221357"
-                    target="_blank">Click for Holiday Deals</a> -->
   <br><br>
 
 
@@ -1201,7 +1197,6 @@
                     
 </div>
 
--->
 
     <!-- JavaScript -->
   
@@ -1223,49 +1218,6 @@
     <!-- StikyMenu -->
     <script src="flafy/js/stickUp.min.js"></script>
     <script type="text/javascript">
-        jQuery(function ($) {
-            $(document).ready(function () {
-                $('.navbar-default').stickUp();
-
-                fbq('track', 'ViewContent');
-                $(function(){
-                    var note = $('#note'),
-                        ts = new Date("November 30, 2021"),
-                        newYear = true;
-
-                    if((new Date()) > ts){
-                        // The new year is here! Count towards something else.
-                        // Notice the *1000 at the end - time must be in milliseconds
-                        ts = (new Date()).getTime() + 10*24*60*60*1000;
-                        newYear = false;
-                    }
-
-                    $('#countdown').countdown({
-                        timestamp   : ts,
-                        callback    : function(days, hours, minutes, seconds){
-
-                            var message = "";
-
-                            message += days + " day" + ( days==1 ? '':'s' ) + ", ";
-                            message += hours + " hour" + ( hours==1 ? '':'s' ) + ", ";
-                            message += minutes + " minute" + ( minutes==1 ? '':'s' ) + " and ";
-                            message += seconds + " second" + ( seconds==1 ? '':'s' ) + " ";
-
-                            if(newYear){
-                                message += "left!  Stock up today!";
-                            }
-                            else {
-                                message += "left to 10 days from now!";
-                            }
-
-                            note.html(message);
-                        }
-                    });
-
-                });
-            });
-        });
-
 
         document.addEventListener('DOMContentLoaded', function() {
             var div,

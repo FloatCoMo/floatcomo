@@ -4,27 +4,56 @@ $(document).ready(function () {
 	});
 
 	$('#holiday-deal').modal();
-	$(function () {
-		$('#holiday-deal').on('click', function () {
-			$($(this).data('modal')).modal();
-			return false;
+	// $(function () {
+	// 	$('#holiday-deal').on('click', function () {
+	// 		$($(this).data('modal')).modal();
+	// 		return false;
+	// 	});
+	// });
+
+
+	//Deal banner start
+
+	jQuery(function ($) {
+		$(document).ready(function () {
+			$('.navbar-default').stickUp();
+			fbq('track', 'ViewContent');
+			$(function () {
+				var note = $('#note');
+				var newYearDate = new Date("January 1, 2022");
+				var now = new Date();
+				if (now < newYearDate) {
+					$('#holiday-deal').modal({
+						escapeClose: false,
+						clickClose: false,
+						showClose: false
+					});
+				} else {
+					$(".BOGO").hide();
+				}
+
+				$('#countdown').countdown({
+					timestamp: newYearDate,
+					callback: function (days, hours, minutes, seconds) {
+						var message = "";
+						message += days + " day" + (days == 1 ? '' : 's') + ", ";
+						message += hours + " hour" + (hours == 1 ? '' : 's') + ", ";
+						message += minutes + " minute" + (minutes == 1 ? '' : 's') + " and ";
+						message += seconds + " second" + (seconds == 1 ? '' : 's') + " ";
+
+						message += "left!  Stock up today!";
+
+
+						note.html(message);
+					}
+				});
+
+			});
 		});
 	});
 
-	var newYear = new Date("November 29, 2022");
-	var now = new Date();
-	if (now < newYear) {
-		$('#holiday-deal').modal({
-			escapeClose: false,
-			clickClose: false,
-			showClose: false
-		});
-	} else {
-		console.log("HIDE BOGO");
-		$(".BOGO").hide();
-	}
 
-
+	//Deal banner end
 
 	$(function () {
 		if ($('[data-lazy-load-image]').length > 0) {
