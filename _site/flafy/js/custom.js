@@ -20,9 +20,9 @@ $(document).ready(function () {
 			fbq('track', 'ViewContent');
 			$(function () {
 				var note = $('#note');
-				var newYearDate = new Date("January 1, 2022");
+				var dealExpirationDate = new Date("Feburary 15, 2022");
 				var now = new Date();
-				if (now < newYearDate) {
+				if (now < dealExpirationDate) {
 					$('#holiday-deal').modal({
 						escapeClose: false,
 						clickClose: false,
@@ -30,10 +30,11 @@ $(document).ready(function () {
 					});
 				} else {
 					$(".BOGO").hide();
+					$("#holiday-deal").hide();
 				}
 
 				$('#countdown').countdown({
-					timestamp: newYearDate,
+					timestamp: dealExpirationDate,
 					callback: function (days, hours, minutes, seconds) {
 						var message = "";
 						message += days + " day" + (days == 1 ? '' : 's') + ", ";
