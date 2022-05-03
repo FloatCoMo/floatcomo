@@ -4,12 +4,12 @@ $(document).ready(function () {
 	});
 
 	$('#holiday-deal').modal();
-	// $(function () {
-	// 	$('#holiday-deal').on('click', function () {
-	// 		$($(this).data('modal')).modal();
-	// 		return false;
-	// 	});
-	// });
+	$(function () {
+		$('#holiday-deal').on('click', function () {
+			$($(this).data('modal')).modal();
+			return false;
+		});
+	});
 
 
 	//Deal banner start
