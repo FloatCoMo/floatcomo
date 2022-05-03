@@ -20,7 +20,7 @@ $(document).ready(function () {
 			fbq('track', 'ViewContent');
 			$(function () {
 				var note = $('#note');
-				var dealExpirationDate = new Date("Feburary 15, 2022");
+				var dealExpirationDate = new Date("May 9, 2022");
 				var now = new Date();
 				if (now < dealExpirationDate) {
 					$('#holiday-deal').modal({
