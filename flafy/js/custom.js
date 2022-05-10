@@ -3,7 +3,6 @@ $(document).ready(function () {
 		if (!$(this).parent().hasClass('dropdown')) $('.navbar-ex1-collapse').collapse('hide');
 	});
 
-	$('#holiday-deal').modal();
 	$(function () {
 		$('#holiday-deal').on('click', function () {
 			$($(this).data('modal')).modal();

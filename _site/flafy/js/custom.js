@@ -3,7 +3,6 @@ $(document).ready(function () {
 		if (!$(this).parent().hasClass('dropdown')) $('.navbar-ex1-collapse').collapse('hide');
 	});
 
-	$('#holiday-deal').modal();
 	$(function () {
 		$('#holiday-deal').on('click', function () {
 			$($(this).data('modal')).modal();
@@ -20,7 +19,7 @@ $(document).ready(function () {
 			fbq('track', 'ViewContent');
 			$(function () {
 				var note = $('#note');
-				var dealExpirationDate = new Date("May 9, 2022");
+				var dealExpirationDate = new Date("May 11, 2022");
 				var now = new Date();
 				if (now < dealExpirationDate) {
 					$('#holiday-deal').modal({
