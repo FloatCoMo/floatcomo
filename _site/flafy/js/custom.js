@@ -3,13 +3,6 @@ $(document).ready(function () {
 		if (!$(this).parent().hasClass('dropdown')) $('.navbar-ex1-collapse').collapse('hide');
 	});
 
-	$(function () {
-		$('#holiday-deal').on('click', function () {
-			$($(this).data('modal')).modal();
-			return false;
-		});
-	});
-
 
 	//Deal banner start
 
@@ -25,7 +18,7 @@ $(document).ready(function () {
 				if (now < dealExpirationDate && now > dealStartDate) {
 					$('#holiday-deal').modal({
 						escapeClose: false,
-						clickClose: false,
+						clickClose: true,
 						showClose: false
 					});
 				} else {
