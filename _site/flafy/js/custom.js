@@ -6,16 +6,45 @@ $(document).ready(function () {
 
 	//Deal banner start
 
+
+	
 	jQuery(function ($) {
 		$(document).ready(function () {
 			$('.navbar-default').stickUp();
 			fbq('track', 'ViewContent');
 			$(function () {
-				var note = $('#note');
-				var dealExpirationDate = new Date("June 19, 2022");
-				var dealStartDate = new Date("June 6, 2022");
 				var now = new Date();
-				if (now < dealExpirationDate && now > dealStartDate) {
+				var shouldShow = false;
+				var note = $('#note');
+				var dealExpirationDate = null;
+
+				var blackFridayStart = new Date("November 22, 2022");
+				var blackFridayEnd = new Date("November 29, 2022");
+
+				var holidayStartDate = new Date("December 8, 2022");
+				var holidayEndDate = new Date("December 31, 2022");
+
+				if (now > blackFridayStart && now < blackFridayEnd ) {
+					shouldShow = true;
+					dealExpirationDate = blackFridayEnd;
+					$('#holiday-text-1').text("Black Friday Special");
+					$('#holiday-text-2').text("Buy one float 💧 one sauna 🔥 session and one 💆 massage , get one of each free!");
+					$('#holiday-text-3').text("Offer valid through November 28th!");
+					$(".holiday-link").attr("href", "https://clarityfloats.floathelm.com/store/giftcards/1221357");
+					$(".holiday-link-main-page").text("Get the Black Friday Deal!");
+				}
+
+				if (now > holidayStartDate && now < holidayEndDate) {
+					shouldShow = true;
+					dealExpirationDate = holidayEndDate;
+					$('#holiday-text-1').text("Holiday Special");
+					$('#holiday-text-2').text("Buy one float 💧 or sauna 🔥 session, get one free!");
+					$('#holiday-text-3').text("Offer valid till the end of the year!");
+					$(".holiday-link").attr("href", "https://clarityfloats.floathelm.com/store/giftcards");
+					$(".holiday-link-main-page").text("Get the Holiday Special!");
+				}
+
+				if (shouldShow) {
 					$('#holiday-deal').modal({
 						escapeClose: false,
 						clickClose: true,
