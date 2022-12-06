@@ -21,7 +21,7 @@ $(document).ready(function () {
 				var blackFridayStart = new Date("November 22, 2022");
 				var blackFridayEnd = new Date("November 29, 2022");
 
-				var holidayStartDate = new Date("December 8, 2022");
+				var holidayStartDate = new Date("December 5, 2022");
 				var holidayEndDate = new Date("December 31, 2022");
 
 				if (now > blackFridayStart && now < blackFridayEnd ) {
