@@ -24,6 +24,10 @@ $(document).ready(function () {
 				var holidayStartDate = new Date("December 5, 2022");
 				var holidayEndDate = new Date("December 31, 2022");
 
+				var valentinesDayStartDate = new Date("Febuary 1, 2023");
+				var valentinesDayEndDate = new Date("Febuary 14, 2023");
+
+
 				if (now > blackFridayStart && now < blackFridayEnd ) {
 					shouldShow = true;
 					dealExpirationDate = blackFridayEnd;
@@ -42,6 +46,16 @@ $(document).ready(function () {
 					$('#holiday-text-3').text("Offer valid till the end of the year!");
 					$(".holiday-link").attr("href", "https://clarityfloats.floathelm.com/store/giftcards");
 					$(".holiday-link-main-page").text("Get the Holiday Special!");
+				}
+
+				if (now > valentinesDayStartDate && now < valentinesDayEndDate) {
+					shouldShow = true;
+					dealExpirationDate = valentinesDayEndDate;
+					$('#holiday-text-1').text("Valentine's Day Special");
+					$('#holiday-text-2').text("Two floats for $99 💧 and buy one sauna 🔥 session, get one free!");
+					$('#holiday-text-3').text("Offer valid till Febuary 15th!");
+					$(".holiday-link").attr("href", "https://clarityfloats.floathelm.com/store/giftcards");
+					$(".holiday-link-main-page").text("Get the Valentine's Day Special!");
 				}
 
 				if (shouldShow) {
