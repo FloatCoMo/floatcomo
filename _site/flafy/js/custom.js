@@ -27,6 +27,10 @@ $(document).ready(function () {
 				var valentinesDayStartDate = new Date("Febuary 1, 2023");
 				var valentinesDayEndDate = new Date("Febuary 14, 2023");
 
+				var membershipDealStartDate = new Date("March 1, 2023");
+				var membershipDealEndDate = new Date("March 31, 2023");
+
+
 
 				if (now > blackFridayStart && now < blackFridayEnd ) {
 					shouldShow = true;
@@ -49,25 +53,44 @@ $(document).ready(function () {
 				}
 
 				if (now > valentinesDayStartDate && now < valentinesDayEndDate) {
-					shouldShow = true;
+					// shouldShow = true;
 					dealExpirationDate = valentinesDayEndDate;
-					$('#holiday-text-1').text("Valentine's Day Special");
+					$('#holiday-text-1').text("Valentine's Day Special!");
 					$('#holiday-text-2').text("Two floats for $99 💧 and buy one sauna 🔥 session, get one free!");
 					$('#holiday-text-3').text("Offer valid till Febuary 15th!");
 					$(".holiday-link").attr("href", "https://clarityfloats.floathelm.com/store/giftcards");
 					$(".holiday-link-main-page").text("Get the Valentine's Day Special!");
 				}
 
-				if (shouldShow) {
-					$('#holiday-deal').modal({
+				if (now > membershipDealStartDate && now < membershipDealEndDate) {
+					// shouldShow = true;
+					console.log("SHOW");
+					$('#membership-deal').modal({
 						escapeClose: false,
 						clickClose: true,
 						showClose: false
 					});
+					dealExpirationDate = membershipDealEndDate;
+					$('#membership-deal-text-1').text("March Membership Deal!");
+					$('#membership-deal-text-2').text("Start a float 💧 or sauna 🔥 memberhsip for $1!");
+					$('#membership-deal-text-3').text("Offer valid till March 31st!");
+					$(".membership-deal-link").attr("href", "https://clarityfloats.floathelm.com/store");
+					$(".membership-deal-link-main-page").text("Get the Membership Special!");
 				} else {
-					$(".BOGO").hide();
-					$("#holiday-deal").hide();
+					$(".membership-deal-btn").hide();
+
 				}
+
+				// if (shouldShow) {
+				// 	$('#holiday-deal').modal({
+				// 		escapeClose: false,
+				// 		clickClose: true,
+				// 		showClose: false
+				// 	});
+				// } else {
+				// 	$(".BOGO").hide();
+				// 	$("#holiday-deal").hide();
+				// }
 
 				$('#countdown').countdown({
 					timestamp: dealExpirationDate,
