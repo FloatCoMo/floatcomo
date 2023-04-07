@@ -14,7 +14,9 @@ $(document).ready(function () {
 			fbq('track', 'ViewContent');
 			$(function () {
 				var now = new Date();
-				var shouldShow = false;
+				var fromStudiesUrl = window.location.href.indexOf("studies") > -1;
+
+				// var shouldShow = false;
 				var note = $('#note');
 				var dealExpirationDate = null;
 
@@ -32,8 +34,8 @@ $(document).ready(function () {
 
 
 
-				if (now > blackFridayStart && now < blackFridayEnd ) {
-					shouldShow = true;
+				if (now > blackFridayStart && now < blackFridayEnd && !fromStudiesUrl) {
+					// shouldShow = true;
 					dealExpirationDate = blackFridayEnd;
 					$('#holiday-text-1').text("Black Friday Special");
 					$('#holiday-text-2').text("Buy one float 💧 one sauna 🔥 session and one 💆 massage , get one of each free!");
@@ -42,8 +44,8 @@ $(document).ready(function () {
 					$(".holiday-link-main-page").text("Get the Black Friday Deal!");
 				}
 
-				if (now > holidayStartDate && now < holidayEndDate) {
-					shouldShow = true;
+				if (now > holidayStartDate && now < holidayEndDate && !fromStudiesUrl) {
+					// shouldShow = true;
 					dealExpirationDate = holidayEndDate;
 					$('#holiday-text-1').text("Holiday Special");
 					$('#holiday-text-2').text("Buy one float 💧 or sauna 🔥 session, get one free!");
@@ -52,7 +54,7 @@ $(document).ready(function () {
 					$(".holiday-link-main-page").text("Get the Holiday Special!");
 				}
 
-				if (now > valentinesDayStartDate && now < valentinesDayEndDate) {
+				if (now > valentinesDayStartDate && now < valentinesDayEndDate && !fromStudiesUrl) {
 					// shouldShow = true;
 					dealExpirationDate = valentinesDayEndDate;
 					$('#holiday-text-1').text("Valentine's Day Special!");
@@ -62,7 +64,7 @@ $(document).ready(function () {
 					$(".holiday-link-main-page").text("Get the Valentine's Day Special!");
 				}
 
-				if (now > membershipDealStartDate && now < membershipDealEndDate) {
+				if (now > membershipDealStartDate && now < membershipDealEndDate && !fromStudiesUrl) {
 					// shouldShow = true;
 					console.log("SHOW");
 					$('#membership-deal').modal({
