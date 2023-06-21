@@ -66,6 +66,7 @@ $(document).ready(function () {
 
 				if (now > membershipDealStartDate && now < membershipDealEndDate && !fromStudiesUrl) {
 					// shouldShow = true;
+					$(".membership-deal-btn").show();
 					console.log("SHOW");
 					$('#membership-deal').modal({
 						escapeClose: false,
@@ -78,9 +79,6 @@ $(document).ready(function () {
 					$('#membership-deal-text-3').text("Offer valid till April 30th!");
 					$(".membership-deal-link").attr("href", "https://clarityfloats.floathelm.com/store");
 					$(".membership-deal-link-main-page").text("Get the Membership Special!");
-				} else {
-					$(".membership-deal-btn").hide();
-
 				}
 
 				// if (shouldShow) {
