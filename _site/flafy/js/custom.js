@@ -29,8 +29,8 @@ $(document).ready(function () {
 				var valentinesDayStartDate = new Date("Febuary 1, 2023");
 				var valentinesDayEndDate = new Date("Febuary 14, 2023");
 
-				var membershipDealStartDate = new Date("March 1, 2023");
-				var membershipDealEndDate = new Date("April 30, 2023");
+				var membershipDealStartDate = new Date("September 1, 2023");
+				var membershipDealEndDate = new Date("September 31, 2023");
 
 
 
@@ -67,16 +67,15 @@ $(document).ready(function () {
 				if (now > membershipDealStartDate && now < membershipDealEndDate && !fromStudiesUrl) {
 					// shouldShow = true;
 					$(".membership-deal-btn").show();
-					console.log("SHOW");
 					$('#membership-deal').modal({
 						escapeClose: false,
 						clickClose: true,
 						showClose: false
 					});
 					dealExpirationDate = membershipDealEndDate;
-					$('#membership-deal-text-1').text("April Membership Deal!");
+					$('#membership-deal-text-1').text("September Membership Deal!");
 					$('#membership-deal-text-2').text("Start a float 💧 or sauna 🔥 memberhsip for $1!");
-					$('#membership-deal-text-3').text("Offer valid till April 30th!");
+					$('#membership-deal-text-3').text("Offer valid till September 30th!");
 					$(".membership-deal-link").attr("href", "https://clarityfloats.floathelm.com/store");
 					$(".membership-deal-link-main-page").text("Get the Membership Special!");
 				}
