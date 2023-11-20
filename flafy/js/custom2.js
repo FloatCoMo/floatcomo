@@ -21,7 +21,7 @@ $(document).ready(function () {
 				var note = $('#note');
 				var dealExpirationDate = null;
 
-				var blackFridayStart = new Date("November 22, 2023");
+				var blackFridayStart = new Date("November 20, 2023");
 				var blackFridayEnd = new Date("November 27, 2023");
 
 				var holidayStartDate = new Date("December 5, 2022");
