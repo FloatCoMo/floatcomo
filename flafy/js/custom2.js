@@ -5,9 +5,6 @@ $(document).ready(function () {
 
 
 	//Deal banner start
-	console.log("TEST2");
-
-
 	
 	jQuery(function ($) {
 		$(document).ready(function () {
