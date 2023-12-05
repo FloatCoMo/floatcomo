@@ -21,8 +21,8 @@ $(document).ready(function () {
 				var blackFridayStart = new Date("November 20, 2023");
 				var blackFridayEnd = new Date("November 27, 2023");
 
-				var holidayStartDate = new Date("December 5, 2022");
-				var holidayEndDate = new Date("December 31, 2022");
+				var holidayStartDate = new Date("December 4, 2023");
+				var holidayEndDate = new Date("December 31, 2023");
 
 				var valentinesDayStartDate = new Date("Febuary 1, 2023");
 				var valentinesDayEndDate = new Date("Febuary 14, 2023");
