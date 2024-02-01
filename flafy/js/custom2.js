@@ -24,8 +24,8 @@ $(document).ready(function () {
 				var holidayStartDate = new Date("December 4, 2023");
 				var holidayEndDate = new Date("December 31, 2023");
 
-				var valentinesDayStartDate = new Date("Febuary 1, 2023");
-				var valentinesDayEndDate = new Date("Febuary 14, 2023");
+				var valentinesDayStartDate = new Date("Febuary 1, 2024");
+				var valentinesDayEndDate = new Date("Febuary 14, 2024");
 
 				var membershipDealStartDate = new Date("September 1, 2023");
 				var membershipDealEndDate = new Date("September 30, 2023");
