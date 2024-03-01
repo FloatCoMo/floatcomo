@@ -27,8 +27,8 @@ $(document).ready(function () {
 				var valentinesDayStartDate = new Date("Febuary 1, 2024");
 				var valentinesDayEndDate = new Date("Febuary 14, 2024");
 
-				var membershipDealStartDate = new Date("September 1, 2023");
-				var membershipDealEndDate = new Date("September 30, 2023");
+				var membershipDealStartDate = new Date("March 1, 2024");
+				var membershipDealEndDate = new Date("March 31, 2024");
 				
 				var deals = [
 					{
