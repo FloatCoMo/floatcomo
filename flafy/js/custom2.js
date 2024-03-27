@@ -27,7 +27,7 @@ $(document).ready(function () {
 				var valentinesDayStartDate = new Date("Febuary 1, 2024");
 				var valentinesDayEndDate = new Date("Febuary 14, 2024");
 
-				var membershipDealStartDate = new Date("March 1, 2024");
+				var membershipDealStartDate = new Date("April 1, 2024");
 				var membershipDealEndDate = new Date("April 30, 2024");
 				
 				var deals = [
@@ -88,6 +88,7 @@ $(document).ready(function () {
 				}
 				console.log("HJI");
 				deals.forEach(setupDeal);
+				console.log(dealExpirationDate);
 
 				if (shouldShow) {
 					$('#holiday-deal').modal({
@@ -100,21 +101,36 @@ $(document).ready(function () {
 					$("#holiday-deal").hide();
 				}
 
-				$('#countdown').countdown({
-					timestamp: dealExpirationDate,
-					callback: (days, hours, minutes, seconds) => {
-						// console.log("HERE");
-						var message = "";
-						message += days + " day" + (days == 1 ? '' : 's') + ", ";
-						message += hours + " hour" + (hours == 1 ? '' : 's') + ", ";
-						message += minutes + " minute" + (minutes == 1 ? '' : 's') + " and ";
-						message += seconds + " second" + (seconds == 1 ? '' : 's') + " ";
+				$('#countdown1').countdown(dealExpirationDate, {
+					elapse:     false,
+					precision:  5,
+					defer:      false
+				  })
 
-						message += "left!  Stock up today!";
-						// console.log(message);
-						note.html(message);
-					}
-				});
+				  $('#clock').countdown(dealExpirationDate).on('update.countdown', function(event) {
+					var $this = $(this).html(event.strftime(''
+					//   + '<span>%-w</span> week%!w '
+					  + '<span>%D</span> days '
+					  + '<span>%H</span> hr '
+					  + '<span>%M</span> min '
+					  + '<span>%S</span> sec till deal ends!'));
+				  });
+
+				// $('#countdown').countdown({
+				// 	timestamp: dealExpirationDate,
+				// 	callback: (days, hours, minutes, seconds) => {
+				// 		// console.log("HERE");
+				// 		var message = "";
+				// 		message += days + " day" + (days == 1 ? '' : 's') + ", ";
+				// 		message += hours + " hour" + (hours == 1 ? '' : 's') + ", ";
+				// 		message += minutes + " minute" + (minutes == 1 ? '' : 's') + " and ";
+				// 		message += seconds + " second" + (seconds == 1 ? '' : 's') + " ";
+
+				// 		message += "left!  Stock up today!";
+				// 		// console.log(message);
+				// 		note.html(message);
+				// 	}
+				// });
 
 			});
 		});
