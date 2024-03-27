@@ -28,7 +28,7 @@ $(document).ready(function () {
 				var valentinesDayEndDate = new Date("Febuary 14, 2024");
 
 				var membershipDealStartDate = new Date("March 1, 2024");
-				var membershipDealEndDate = new Date("March 31, 2024");
+				var membershipDealEndDate = new Date("April 30, 2024");
 				
 				var deals = [
 					{
@@ -61,6 +61,7 @@ $(document).ready(function () {
 						endDate: membershipDealEndDate,
 						text1: `${currentMonthName()} Membership Deal!`,
 						text2: "Start a float 💧 or sauna 🔥 membership for $1!",
+						massageText: `Start a massage membership 💆 - get a free massage at the end of ${nextMonthName()}!💫*`,
 						dealLink: "https://clarityfloats.floathelm.com/store"
 					}
 				];
@@ -69,14 +70,23 @@ $(document).ready(function () {
 					var now = new Date();
 					if (now > deal.startDate && now < deal.endDate && !fromStudiesUrl) {
 						shouldShow = true;
+						console.log(deal.name);
+						dealExpirationDate = deal.endDate
+						// console.log(dealExpirationDate);
 						$('#holiday-text-1').text(deal.text1);
 						$('#holiday-text-2').text(deal.text2);
-						$('#holiday-text-3').text(`Offer valid through ${formatDate(deal.endDate)}`);
+						if(deal.massageText){
+							$('#holiday-text-3a').text(deal.massageText);
+						}
 						$(".holiday-link").attr("href", deal.dealLink);
 						$(".holiday-link-main-page").text(`Get the ${deal.text1}!`);
+						$('#holiday-text-4').text(`Offer valid through ${formatDate(deal.endDate)}`);
+						if(deal.massageText){
+							$('#holiday-text-5').text(`*Must have an active membership with a valid credit card on the last day of ${nextMonthName()}`);
+						}
 					}
 				}
-				
+				console.log("HJI");
 				deals.forEach(setupDeal);
 
 				if (shouldShow) {
@@ -92,7 +102,8 @@ $(document).ready(function () {
 
 				$('#countdown').countdown({
 					timestamp: dealExpirationDate,
-					callback: function (days, hours, minutes, seconds) {
+					callback: (days, hours, minutes, seconds) => {
+						// console.log("HERE");
 						var message = "";
 						message += days + " day" + (days == 1 ? '' : 's') + ", ";
 						message += hours + " hour" + (hours == 1 ? '' : 's') + ", ";
@@ -100,8 +111,7 @@ $(document).ready(function () {
 						message += seconds + " second" + (seconds == 1 ? '' : 's') + " ";
 
 						message += "left!  Stock up today!";
-
-
+						// console.log(message);
 						note.html(message);
 					}
 				});
@@ -160,3 +170,8 @@ function currentMonthName() {
 }
 
 
+function nextMonthName() {
+	let currentDate = new Date();
+	var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	return months[currentDate.getMonth()+1];
+}
