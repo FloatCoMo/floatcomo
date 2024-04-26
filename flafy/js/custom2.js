@@ -21,6 +21,11 @@ $(document).ready(function () {
 				var blackFridayStart = new Date("November 20, 2023");
 				var blackFridayEnd = new Date("November 27, 2023");
 
+
+				var mothersDayStart = new Date("April 20, 2024");
+				var mothersDayEnd = new Date("May 13, 2024");
+
+
 				var holidayStartDate = new Date("December 4, 2023");
 				var holidayEndDate = new Date("December 31, 2023");
 
@@ -28,7 +33,7 @@ $(document).ready(function () {
 				var valentinesDayEndDate = new Date("Febuary 14, 2024");
 
 				var membershipDealStartDate = new Date("April 1, 2024");
-				var membershipDealEndDate = new Date("April 30, 2024");
+				var membershipDealEndDate = new Date("April 20, 2024");
 				
 				var deals = [
 					{
@@ -48,6 +53,14 @@ $(document).ready(function () {
 						dealLink: "https://clarityfloats.floathelm.com/store/giftcards"
 					},
 					{
+						name: "Mother's Day",
+						startDate: mothersDayStart,
+						endDate: mothersDayEnd,
+						text1: "Mother's Day Deal",
+						text2: "One 60 min float and one 60 min massage for $109",
+						dealLink: "https://clarityfloats.floathelm.com/store/giftcards/1224336"
+					},
+					{
 						name: "Valentine's Day",
 						startDate: valentinesDayStartDate,
 						endDate: valentinesDayEndDate,
@@ -61,7 +74,7 @@ $(document).ready(function () {
 						endDate: membershipDealEndDate,
 						text1: `${currentMonthName()} Membership Deal!`,
 						text2: "Start a float 💧 or sauna 🔥 membership for $1!",
-						massageText: `Start a massage membership 💆 - get a free massage at the end of ${nextMonthName()}!💫*`,
+						massageText: `ALSO: Start a massage membership 💆 - get a free massage at the end of ${nextMonthName()}!💫*`,
 						dealLink: "https://clarityfloats.floathelm.com/store"
 					}
 				];
