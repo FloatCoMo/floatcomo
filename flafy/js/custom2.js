@@ -26,6 +26,10 @@ $(document).ready(function () {
 				var mothersDayEnd = new Date("May 13, 2024");
 
 
+				var fathersDayStart = new Date("May 3, 2024");
+				var fathersDayEnd = new Date("June 17, 2024");
+
+
 				var holidayStartDate = new Date("December 4, 2023");
 				var holidayEndDate = new Date("December 31, 2023");
 
@@ -59,6 +63,14 @@ $(document).ready(function () {
 						text1: "Mother's Day Deal",
 						text2: "One 60 min float and one 60 min massage for $109",
 						dealLink: "https://clarityfloats.floathelm.com/store/giftcards/1224336"
+					},
+					{
+						name: "Father's Day",
+						startDate: fathersDayStart,
+						endDate: fathersDayEnd,
+						text1: "Father's Day Deal",
+						text2: "BOGO 60 min floats (two floats) $69",
+						dealLink: "https://clarityfloats.floathelm.com/store/giftcards/1225556"
 					},
 					{
 						name: "Valentine's Day",
