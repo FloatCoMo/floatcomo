@@ -37,7 +37,10 @@ $(document).ready(function () {
 				var valentinesDayEndDate = new Date("Febuary 14, 2024");
 
 				var membershipDealStartDate = new Date("April 1, 2024");
-				var membershipDealEndDate = new Date("April 20, 2024");
+				var membershipDealEndDate = new Date("April 31, 2024");
+				
+				var specialMembershipDealStartDate = new Date("September 1, 2024");
+				var specialMembershipDealEndDate = new Date("September 30, 2024");
 				
 				var deals = [
 					{
@@ -85,8 +88,34 @@ $(document).ready(function () {
 						startDate: membershipDealStartDate,
 						endDate: membershipDealEndDate,
 						text1: `${currentMonthName()} Membership Deal!`,
-						text2: "Start a float 💧 or sauna 🔥 membership for $1!",
-						massageText: `ALSO: Start a massage membership 💆 - get a free massage at the end of ${nextMonthName()}!💫*`,
+						text2: "Start any float 💧 or sauna 🔥 membership for $1!",
+						// text2: "Start any membership💧🔥💆 for $19!<br>a",
+
+						// massageText: `ALSO: Start a massage membership 💆 - get a free massage at the end of ${nextMonthName()}!💫*`,
+						dealLink: "https://clarityfloats.floathelm.com/store"
+					},
+					{
+						name: "Special Membership Deal",
+						startDate: specialMembershipDealStartDate,
+						endDate: specialMembershipDealEndDate,
+						text1: `${currentMonthName()} Membership Deal!`,
+						text2: "Start any membership💧🔥💆 for $19!",
+						specialMembershipHtml: `
+						
+							<a class="btn btn-embossed btn-primary view padding1" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/location/1/memberships/s/a176c6cfc37bc674f07f9fbe5a4d298911258f2b" target="_blank">60 min float 💧</a>
+							<br><br>
+							<a class="btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/location/1/memberships/s/db6bd96472b8aa77099101c7a7c13eb72446ebb8" target="_blank">💧 90 min float</a>
+							<br><br>
+							<a class="btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/location/1/memberships/s/2d736bcd0651eaa366398bc074957a8081d0b79a" target="_blank">60 min massage 💆</a>
+							<br><br>
+							<a class="btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/location/1/memberships/s/1354791696392af9bf79a98a0a234340ef84562c" target="_blank">💆 90 min massage</a>
+							<br><br>
+							<a class="btn btn-embossed btn-primary view" id="bookBtn" onClick="bookClick()" href="https://clarityfloats.floathelm.com/store/location/1/memberships/s/a2bc214bb6caa89386e7f5a5ea15895fea93b314" target="_blank">40 min sauna 🔥</a>
+						
+						`,
+						// text2: "Start any membership💧🔥💆 for $19!<br>a",
+
+						// massageText: `ALSO: Start a massage membership 💆 - get a free massage at the end of ${nextMonthName()}!💫*`,
 						dealLink: "https://clarityfloats.floathelm.com/store"
 					}
 				];
@@ -103,11 +132,19 @@ $(document).ready(function () {
 						if(deal.massageText){
 							$('#holiday-text-3a').text(deal.massageText);
 						}
+						if(deal.specialMembershipHtml){
+							$(".holiday-link").hide();
+							$('#membership-html').html(deal.specialMembershipHtml);
+						}
+
 						$(".holiday-link").attr("href", deal.dealLink);
 						$(".holiday-link-main-page").text(`Get the ${deal.text1}!`);
 						$('#holiday-text-4').text(`Offer valid through ${formatDate(deal.endDate)}`);
 						if(deal.massageText){
 							$('#holiday-text-5').text(`*Must have an active membership with a valid credit card on the last day of ${nextMonthName()}`);
+						}
+						if(deal.specialMembershipHtml){
+							$('#holiday-text-5').text(`*Must pay one month full price in ${nextMonthName()} before you can cancel`);
 						}
 					}
 				}
