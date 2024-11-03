@@ -18,8 +18,8 @@ $(document).ready(function () {
 				var note = $('#note');
 				var dealExpirationDate = null;
 
-				var blackFridayStart = new Date("November 20, 2023");
-				var blackFridayEnd = new Date("November 27, 2023");
+				var blackFridayStart = new Date("November 26, 2024");
+				var blackFridayEnd = new Date("December 2, 2024");
 
 
 				var mothersDayStart = new Date("April 20, 2024");
@@ -30,8 +30,8 @@ $(document).ready(function () {
 				var fathersDayEnd = new Date("June 17, 2024");
 
 
-				var holidayStartDate = new Date("December 4, 2023");
-				var holidayEndDate = new Date("December 31, 2023");
+				var holidayStartDate = new Date("December 8, 2024");
+				var holidayEndDate = new Date("December 31, 2024");
 
 				var valentinesDayStartDate = new Date("Febuary 1, 2024");
 				var valentinesDayEndDate = new Date("Febuary 14, 2024");
